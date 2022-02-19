@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>This is the films MAIN page</h1>
+<br>
+<h4>Films saved in our database:</h4>
+<ul>
+{% for film in films_list %}
+  
+  <li>{{film.title}} ({{film.year}}, genre: "{{film.genre}}")</li>
+{% endfor %}
+</ul>
+{% endblock  %}

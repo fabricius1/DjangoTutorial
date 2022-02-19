@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-fluid d-flex justify-content-center">
+    <form method="POST" action="" sytle="width: 40%;">
+
+        <!-- ADD THIS TAG IN HTML FORMS WITH POST REQUESTS-->
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="exampleInputEmail1">Enter Name</label>
+            <input name="username" type="text" class="form-control my-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Enter Country</label>
+            <input name="country" type="text" class="form-control my-2" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Submit</button>
+    </form>
+</div>
+
+{% endblock  %}

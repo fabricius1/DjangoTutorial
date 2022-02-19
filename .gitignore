@@ -1,0 +1,7 @@
+.myenv
+.env
+conf_file.ini
+db.sqlite3
+__pycache__
+*.pyc
+media/*

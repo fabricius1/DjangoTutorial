@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Film details:</h1>
+<br>
+<table class="table" style="width: 30%">
+  <thead>
+    <tr>
+      <th scope="col">Attribute</th>
+      <th scope="col">Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">Title:</td>
+      <td class="text-dark">{{film.title}}</td>
+    </tr>
+    <tr>
+      <td scope="row">Year:</td>
+      <td>{{film.year}}</td>
+    </tr>
+    <tr>
+      <td>Genre:</td>
+      <td>{{film.genre}}</td>
+    </tr>
+  </tbody>
+</table>
+{% endblock  %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="text-center">GAPMINDER (YEAR {{year}})</h1>
+<div class="container-fluid d-flex justify-content-center">
+  {{plot | safe}}
+</div>
+
+{% endblock  %}

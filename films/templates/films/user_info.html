@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>This is the films USER_INFO page</h1>
+<br>
+{% if userinfo %}
+  <h4>username: {{userinfo.username}}</h4>
+  <h4>country: {{userinfo.country}}</h4>
+{% else %}
+  <h4>username: not informed</h4>
+  <h4>country: not informed</h4>
+{% endif %}
+{% endblock  %}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- INSERT ADITIONAL INFORMATION TO THE HEAD TAG HERE-->
+    {% block head %}
+    {% endblock%}
+
+    <!-- CHANGES THE PAGE TITLE IF THE VARIABLE "title" IS PASSED BY THE VIEW -->
+    {% if title %}
+        <title>{{title}}</title>
+    {% else %}
+    <!-- USE DEFAULT TITLE TEXT IF NO VARIABLE "title" IS PASSED BY THE VIEW -->
+        <title>My Films App</title>
+    {% endif %}
+    
+  </head>
+  <body>
+    <!-- BOOTSTRAP NAVBAR CODE -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="d-flex justify-content-between px-5 mx-auto" style="width: 90%;">
+            <span class="navbar-text text-white">FIRST DJANGO APP</span>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link active" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link active" href="{% url 'films:main' %}">Films</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link active" href="{% url 'films:user_info' %}">UserInfo</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link active" href="{% url 'films:user_form' %}">UserForm</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- END OF NAVBAR CODE-->
+
+
+    <div class="container-fluid mt-5" style="max-width: 80%">    
+    <!-- INSERT THE CONTENT FROM SPECIFIC PAGES HERE-->
+        {% block content %}
+        {% endblock  %}
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
